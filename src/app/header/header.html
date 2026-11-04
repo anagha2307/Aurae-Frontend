@@ -1,7 +1,7 @@
 <nav class="block w-full max-w-screen-2xl px-4 py-2 mx-auto bg-white shadow-md rounded-md lg:px-8 lg:py-3">
   <div class="container flex flex-wrap items-center justify-between mx-auto text-red-950 ">
-    <a href="#" id="aurae" class="mr-4 block cursor-pointer py-1 text-5xl w-full text-center text-red-950 font-semibold">
-      Aurae
+    <a href="#" id="aurae" class="mr-4 block cursor-pointer py-1 text-5xl w-100 text-red-950 font-bold">
+      Aurae 
     </a>
     <!--Search bar-->
     <div class="items-center hidden gap-x-2 lg:flex">
@@ -40,34 +40,32 @@
       <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
         <li class="flex items-center p-1 text-md gap-x-2 text-red-950">
           <i class="fa-solid fa-house text-lg"></i>
-          <a href="#" class="flex items-center">
+          <a href="#" class="flex items-center" routerLink="/">
             Home
           </a>
         </li>
         <li class="flex items-center p-1 text-md gap-x-2 text-red-950">
           <i class="fa-solid fa-store text-lg"></i>
-          <a href="#" class="flex items-center">
+          <a href="#" class="flex items-center" routerLink="/candles">
             Shop
           </a>
         </li>
         <li class="flex items-center p-1 text-md gap-x-2 text-red-950">
-            <i class="fa-solid fa-file-lines text-lg"></i>
-          <a href="#" class="flex items-center">
+          <i class="fa-solid fa-file-lines text-lg"></i>
+          <a href="#" class="flex items-center" routerLink="/about">
             About
           </a>
         </li>
         <li class="flex items-center p-1 text-md gap-x-2 text-red-950">
-            <i class="fa-solid fa-envelope text-lg"></i>
-          <a href="#" class="flex items-center">
+          <i class="fa-solid fa-envelope text-lg"></i>
+          <a href="#" class="flex items-center" routerLink="/contact">
             Contact
           </a>
         </li>
         <li class="flex items-center p-1 text-md gap-x-2 text-red-950">
-            <i class="fa-solid fa-circle-user text-lg"></i>
+            <i class="fa-solid fa-circle-user text-lg" routerLink="/profile"></i>
         </li>
       </ul>
-    </div>
-
-    
+    </div>    
   </div>
 </nav>
