@@ -4,6 +4,7 @@ import { Candles } from './candles/candles';
 import { About } from './about/about';
 import { Login } from './login/login';
 import { ViewCandle } from './view-candle/view-candle';
+import { Cart } from './cart/cart';
 
 export const routes: Routes = [
     {
@@ -21,4 +22,7 @@ export const routes: Routes = [
     {
         path:"login",component:Login,title:"Aurae-Login"
     },
+    {
+        path:"cart",component:Cart,title:"Aurae-Cart"
+    }
 ];
