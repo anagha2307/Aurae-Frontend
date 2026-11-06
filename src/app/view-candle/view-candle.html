@@ -52,28 +52,37 @@
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">-</button>
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">1</button>
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">+</button>
-                </div> 
+                </div>
                 <a routerLink="/cart" class="w-full sm:mx-auto">
                     <button class="border border-red-950 bg-red-950 text-white py-2 px-24 text-center md:text-lg text-xl 
                     shadow-sm hover:shadow-md hover:text-red-950 hover:bg-white" type="button">ADD TO CART</button>
                 </a>
             </div>
+            <div class="flex gap-4 text-sm mt-4 text-red-950">
+                <span><i class="fa-solid fa-truck"></i> Free delivery above ₹999</span>
+                <span><i class="fa-solid fa-rotate-left"></i> Easy 7-day returns</span>
+                <span><i class="fa-solid fa-shield-halved"></i> COD Available </span>
+            </div>
             <!--features and desription-->
             <!-- Description Accordion-->
             <div class="border-b border-red-950">
-                <button (click)="toggleAccordion(0)" class="w-full flex justify-between items-center py-5 text-red-950">
+                <button (click)="toggleAccordion(0)" class="w-full flex justify-between items-center py-3 text-red-950">
                     <h5 class="font-normal text-xl">DESCRIPTION</h5>
                     <span class="text-red-950 transition-transform duration-300"><i
                             class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div class="overflow-hidden transition-all duration-300 
                     ease-in-out">
-                    <div class="pb-5 max-h-56 text-lg">Allow the warm and alluring fragrance of our Vanilla Breeze Soy Candle to uplift your mood and soothe your spirit. A proven mood-booster, the sweet, rich scent of Vanilla is an aromatherapy staple because of its remarkable stress-relieving capabilities. So elevate your home aesthetics and your spirits with our beautiful, hand-poured soy wax candle in classic amber jars, and feel happy and relaxed all day.</div>
+                    <div class="pb-5 max-h-48 text-lg text-red-950">Allow the warm and alluring fragrance of our Vanilla
+                        Breeze Soy Candle to uplift your mood and soothe your spirit. A proven mood-booster, the sweet,
+                        rich scent of Vanilla is an aromatherapy staple because of its remarkable stress-relieving
+                        capabilities. So elevate your home aesthetics and your spirits with our beautiful, hand-poured
+                        soy wax candle in classic amber jars, and feel happy and relaxed all day.</div>
                 </div>
             </div>
             <!-- Features Accordion-->
             <div class="border-b border-red-950 p-1">
-                <button (click)="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-red-950">
+                <button (click)="toggleAccordion(1)" class="w-full flex justify-between items-center py-3 text-red-950">
                     <h5 class="font-normal text-xl">REASONS TO LOVE</h5>
                     <span class="text-red-950 transition-transform duration-300">
                         <i class="fa-solid fa-angle-down"></i>
@@ -81,7 +90,7 @@
                 </button>
                 <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-56">
                     <div class="text-lg">
-                        <ul class="list-disc list-inside marker:text-red-950 text-red-950 space-y-2 py-2">
+                        <ul class="list-disc list-inside marker:text-red-950 text-red-950 py-2">
                             <li>Warm, and creamy notes of Vanilla, Sweet Caramel, and Musk</li>
                             <li>Made with 100% plant-based soy wax</li>
                             <li>Non-toxic, vegan, and 100% biodegradable</li>
@@ -93,9 +102,10 @@
                     </div>
                 </div>
             </div>
+            <!--Candle Etiquettes - General for every candle -->
             <div class="border-b border-red-950">
-                <button (click)="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-red-950">
-                    <h5 class="font-normal text-xl">CANDLE ETIQUETTES</h5>
+                <button (click)="toggleAccordion(2)" class="w-full flex justify-between items-center py-3 text-red-950">
+                    <h5 class="font-normal text-xl">CANDLE ETIQUETTES </h5>
                     <span class="text-red-950 transition-transform duration-300"><i
                             class="fa-solid fa-angle-down"></i></span>
                 </button>
@@ -111,6 +121,47 @@
                     </div>
                 </div>
             </div>
+            <!--Candle usage - General for every candle -->
+            <div class="border-b border-red-950">
+                <button (click)="toggleAccordion(3)" class="w-full flex justify-between items-center py-3 text-red-950">
+                    <h5 class="font-normal text-xl">HOW TO USE</h5>
+                    <span class="text-red-950 transition-transform duration-300"><i
+                            class="fa-solid fa-angle-down"></i></span>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-40">
+                    <div class="p-3 md:text-lg text-red-950">
+                        Place the candle on a heat-resistant and stable surface.Be sure to trim the wick to 1/8th inch
+                        before each use.We recommend burning for no more than 2 hours at a time.Allow the wax to cool
+                        before relighting.
+                    </div>
+                </div>
+            </div>
+            <!--Product details-->
+            <div class="border-b border-red-950">
+                <button (click)="toggleAccordion(4)" class="w-full flex justify-between items-center py-3 text-red-950">
+                    <h5 class="font-normal text-xl">PRODUCT INFORMATION</h5>
+                    <span class="text-red-950 transition-transform duration-300"><i
+                            class="fa-solid fa-angle-down"></i></span>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-40">
+                    <div class="p-2 md:text-lg text-red-950">
+                        <p class="text-lg">
+                            <span class="font-semibold">Net weight : </span>
+                            <span class="font-normal px-2"> 100 g</span>
+                        </p>
+                        <p class="text-lg">
+                            <span class="font-semibold">Shelf Life : </span>
+                            <span class="font-normal px-2">Best Before 18 Months</span>
+                        </p>
+                        <p class="text-lg">
+                            <span class="font-semibold">Burning Time : </span>
+                            <span class="font-normal px-2"> Upto 40 Hours</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <p class="text-lg py-2 text-gray-950">Country of Origin : India</p>
         </div>
     </div>
 </div>
