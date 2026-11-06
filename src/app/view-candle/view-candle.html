@@ -1,6 +1,6 @@
 <app-header></app-header>
-<div class="max-w-7xl mx-auto my-5 p-5">
-    <div class="grid grid-cols-2 gap-5">
+<div class="container-fluid max-w-7xl mx-auto my-5 p-5">
+    <div class="md:grid md:grid-cols-2 gap-5">
         <!--Image grid with mutiple imgs-->
         <div class="grid gap-4">
             <div>
@@ -38,7 +38,7 @@
         </div>
         <div class="p-6">
             <h5 class="font-normal">SAFFRON AND SANDALWOOD</h5>
-            <h1 class="font-semibold text-4xl pt-3">The Vanilla Breeze Scented Candle</h1>
+            <h1 class="font-semibold text-red-950 text-4xl pt-3">The Vanilla Breeze Scented Candle</h1>
             <h6 class="mt-5">Feels like a warm hug at the end of a long day</h6>
             <div class="flex justify-between items-center mt-4">
                 <h3 class="font-bold">₹ 449</h3>
@@ -46,23 +46,34 @@
             </div>
             <span class="font-normal text-sm text-coral-300">(MRP Inclusive of all taxes)</span>
             <!--Cart btn and quantity-->
-            <div class="flex items-center gap-10">
+            <div class="md:flex md:items-center sm:justify-start justify-between gap-4 md:gap-10">
                 <div class="row flex my-5 border border-red-950 p-1">
-                    <button class="py-1 px-5 text-center text-xl transition-all hover:text-red-800"
-                        type="button">-</button>
-                    <button class="py-1 px-5 text-center text-xl transition-all hover:text-red-800"
-                        type="button">1</button>
-                    <button class="py-1 px-5 text-center text-xl transition-all hover:text-red-800"
-                        type="button">+</button>
-                </div>
-                <a routerLink="/cart"><button class="border border-red-950 text-white py-2 px-24 text-center 
-                    text-xl transition-all shadow-sm text-white bg-red-950 hover:shadow-lg
-                    disabled:opacity-50 disabled:shadow-none" type="button">
-                        ADD TO CART
-                    </button>
+                    <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">-</button>
+                    <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">1</button>
+                    <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">+</button>
+                </div> 
+                <a routerLink="/cart" class="w-full sm:mx-auto">
+                    <button class="border border-red-950 bg-red-950 text-white py-3 lg:px-24 text-center text-xl 
+                    shadow-sm hover:shadow-md hover:text-red-950 hover:bg-white" type="button">ADD TO CART</button>
                 </a>
             </div>
-            
+            <!--features and description-->
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-red-950">
+                <button (click)="toggleAccordion(0)" class="w-full flex justify-between items-center py-5 text-red-950">
+                    <h5 class="font-normal">DESCRIPTION</h5>
+                    <span class="text-red-950 transition-transform duration-300"><i
+                            class="fa-solid fa-angle-down"></i></span>
+                </button>
+                <div class="max-h-0 overflow-hidden transition-all duration-300 
+                    ease-in-out">
+                    <div class="pb-5 max-h-56 text-sm text-red-900">Material Tailwind allows you to quickly build modern,
+                        responsive websites with a focus on design.</div>
+                </div>
+            </div>
+            <!-- Accordion Item 2 -->
+            <!-- Accordion Item 3 -->
         </div>
     </div>
 </div>
+<app-footer></app-footer>
