@@ -1,8 +1,8 @@
 <app-header></app-header>
 <div class="container-fluid max-w-7xl mx-auto my-5 p-5">
-    <div class="md:grid md:grid-cols-2 gap-5">
+    <div class="md:grid md:grid-cols-2 gap-5 items-start">
         <!--Image grid with mutiple imgs-->
-        <div class="grid gap-4">
+        <div class="grid gap-4 md:sticky top-5 self-start">
             <div>
                 <img class="h-auto w-full max-w-150 rounded-lg object-cover object-center md:h-[450px]"
                     src="https://www.kimirica.shop/cdn/shop/files/CandleWorks-Listing_Image-Template-July2025-37.jpg?v=1755064607&width=500"
@@ -36,7 +36,8 @@
                 </div>
             </div>
         </div>
-        <div class="p-6">
+        <!--Product Details-->
+        <div class="p-6 text-scroll">
             <h5 class="font-normal">SAFFRON AND SANDALWOOD</h5>
             <h1 class="font-semibold text-red-950 text-4xl pt-3">The Vanilla Breeze Scented Candle</h1>
             <h6 class="mt-5">Feels like a warm hug at the end of a long day</h6>
@@ -46,33 +47,70 @@
             </div>
             <span class="font-normal text-sm text-coral-300">(MRP Inclusive of all taxes)</span>
             <!--Cart btn and quantity-->
-            <div class="md:flex md:items-center sm:justify-start justify-between gap-4 md:gap-10">
+            <div class="lg:flex lg:items-center sm:justify-start justify-between gap-4 md:gap-10">
                 <div class="row flex my-5 border border-red-950 p-1">
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">-</button>
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">1</button>
                     <button class="py-1 px-5 text-center text-xl hover:text-red-800" type="button">+</button>
                 </div> 
                 <a routerLink="/cart" class="w-full sm:mx-auto">
-                    <button class="border border-red-950 bg-red-950 text-white py-3 lg:px-24 text-center text-xl 
+                    <button class="border border-red-950 bg-red-950 text-white py-2 px-24 text-center md:text-lg text-xl 
                     shadow-sm hover:shadow-md hover:text-red-950 hover:bg-white" type="button">ADD TO CART</button>
                 </a>
             </div>
-            <!--features and description-->
-            <!-- Accordion Item 1 -->
+            <!--features and desription-->
+            <!-- Description Accordion-->
             <div class="border-b border-red-950">
                 <button (click)="toggleAccordion(0)" class="w-full flex justify-between items-center py-5 text-red-950">
-                    <h5 class="font-normal">DESCRIPTION</h5>
+                    <h5 class="font-normal text-xl">DESCRIPTION</h5>
                     <span class="text-red-950 transition-transform duration-300"><i
                             class="fa-solid fa-angle-down"></i></span>
                 </button>
-                <div class="max-h-0 overflow-hidden transition-all duration-300 
+                <div class="overflow-hidden transition-all duration-300 
                     ease-in-out">
-                    <div class="pb-5 max-h-56 text-sm text-red-900">Material Tailwind allows you to quickly build modern,
-                        responsive websites with a focus on design.</div>
+                    <div class="pb-5 max-h-56 text-lg">Allow the warm and alluring fragrance of our Vanilla Breeze Soy Candle to uplift your mood and soothe your spirit. A proven mood-booster, the sweet, rich scent of Vanilla is an aromatherapy staple because of its remarkable stress-relieving capabilities. So elevate your home aesthetics and your spirits with our beautiful, hand-poured soy wax candle in classic amber jars, and feel happy and relaxed all day.</div>
                 </div>
             </div>
-            <!-- Accordion Item 2 -->
-            <!-- Accordion Item 3 -->
+            <!-- Features Accordion-->
+            <div class="border-b border-red-950 p-1">
+                <button (click)="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-red-950">
+                    <h5 class="font-normal text-xl">REASONS TO LOVE</h5>
+                    <span class="text-red-950 transition-transform duration-300">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-56">
+                    <div class="text-lg">
+                        <ul class="list-disc list-inside marker:text-red-950 text-red-950 space-y-2 py-2">
+                            <li>Warm, and creamy notes of Vanilla, Sweet Caramel, and Musk</li>
+                            <li>Made with 100% plant-based soy wax</li>
+                            <li>Non-toxic, vegan, and 100% biodegradable</li>
+                            <li>Clean burning</li>
+                            <li>Hand-poured</li>
+                            <li>Long-lasting with minimal soot</li>
+                            <li>Classic amber jar with spill-proof black lid</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-red-950">
+                <button (click)="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-red-950">
+                    <h5 class="font-normal text-xl">CANDLE ETIQUETTES</h5>
+                    <span class="text-red-950 transition-transform duration-300"><i
+                            class="fa-solid fa-angle-down"></i></span>
+                </button>
+                <div class="overflow-hidden transition-all duration-300 ease-in-out max-h-56">
+                    <div class="p-3 text-lg">
+                        <ul class="list-disc list-inside marker:text-red-950 text-red-950 text-justify">
+                            <li>Burn the candle within sight</li>
+                            <li>Keep the burning candle away from children, pets,and anything that can catch fire</li>
+                            <li>Do not burn the candle for more than 2 hours to avoid soot</li>
+                            <li>You can also use the metal lid of the candle as a coaster while burning</li>
+                            <li>Cover the candle with the lid after use to prevent it from dust</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
